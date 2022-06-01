@@ -1,8 +1,9 @@
 # memcached-operator
-// TODO(user): Add simple overview of use/purpose
+Prototyping a memcached operator.
 
 ## Description
-// TODO(user): An in-depth paragraph about your project and overview of use
+
+This operator is strictly for educational and experimental purposes. I was forced to change some configuration in order to get this to work on an M1 machine. See the [M1 troubles doc](./docs/m1-troubles.md) for details on what I did and why.
 
 ## Getting Started
 You’ll need a Kubernetes cluster to run against. You can use [KIND](https://sigs.k8s.io/kind) to get a local cluster for testing, or run against a remote cluster.
@@ -16,11 +17,11 @@ kubectl apply -f config/samples/
 ```
 
 2. Build and push your image to the location specified by `IMG`:
-	
+
 ```sh
 make docker-build docker-push IMG=<some-registry>/memcached-operator:tag
 ```
-	
+
 3. Deploy the controller to the cluster with the image specified by `IMG`:
 
 ```sh
@@ -47,8 +48,8 @@ make undeploy
 ### How it works
 This project aims to follow the Kubernetes [Operator pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/)
 
-It uses [Controllers](https://kubernetes.io/docs/concepts/architecture/controller/) 
-which provides a reconcile function responsible for synchronizing resources untile the desired state is reached on the cluster 
+It uses [Controllers](https://kubernetes.io/docs/concepts/architecture/controller/)
+which provides a reconcile function responsible for synchronizing resources untile the desired state is reached on the cluster
 
 ### Test It Out
 1. Install the CRDs into the cluster:
@@ -91,4 +92,3 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-
